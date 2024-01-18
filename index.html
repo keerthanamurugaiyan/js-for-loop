@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+      <script>
+        const address = [1, "ebrain",
+            { name: "array" },
+            {
+                name: "keerthna",
+                age: 20
+            }, {
+                name: "pranjuka",
+                age: 18,
+                address: {
+                    street: "north",
+                    city: "Thanjavur"
+                }
+            },
+            {
+                name: "keerthana",
+                addressTwo: [{
+                    permanent: {
+                        street: "north",
+                        city: "Orathanadu"
+                    },
+                    temporary: {
+                        street: "south",
+                        city: "chennai"
+                    }
+                }]
+            }];
+
+            for (let i = 0; i < address.length; i++){
+                if (typeof address[i] ==='number' || typeof address[i] === 'string'){
+                    console.log(address[i]);
+                }
+
+                    if(address[i].name){
+                        console.log(address[i].name);
+                    }
+                    if (address[i].age){
+                        console.log(address[i].age);
+                    }
+                    if (address[i].address){
+                        console.log(address[i].address);
+                    }
+                    if(address[i].addressTwo){
+                        console.log(address[i].addressTwo)
+                        for(const iterator of address[i].addressTwo){
+                            console.log(iterator.permanent);
+                            console.log(iterator.permanent.street);
+                            console.log(iterator.temporary);
+                            console.log(iterator.temporary.city);
+
+                        }
+                    }
+                } 
+              
+            
+    </script>
+    
+      
+        
+      
+</body>
+</html>
